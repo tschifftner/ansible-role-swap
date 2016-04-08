@@ -1,0 +1,4 @@
+---
+
+swap_file: '/root/swapfile'
+swap_space: '2G'
