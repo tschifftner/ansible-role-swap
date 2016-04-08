@@ -55,8 +55,8 @@ script:
   # ansible-lint checks for best practice
   - ansible-lint tests/$SITE
 
-  # Check groups
-  - sudo test -e /root/swapfile
+  # Check swapfile
+  - sudo ls -lh /root/swapfile
   - sudo grep '/root/swapfile' /etc/fstab
 
 
@@ -66,6 +66,7 @@ after_failure:
   - sudo cat /etc/fstab
   - sudo ls -l /root/
   - ansible --version
+  - ansible-lint --version
 
 notifications:
   slack: ambimax:2MlPTX9bY9aPxCPhJGxHKIT6
