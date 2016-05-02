@@ -8,6 +8,7 @@
   file:
     path: "{{ swap_file }}"
     mode: '0600'
+  when: ansible_swaptotal_mb < 1
 
 - name: Format swap file
   command: mkswap {{ swap_file }}
@@ -19,12 +20,15 @@
     regexp: "{{ swap_file }}"
     line: "{{ swap_file }} none swap sw 0 0"
     state: present
+  when: ansible_swaptotal_mb < 1
 
 - name: Turn on swap
   command: swapon -a
   changed_when: false
+  when: ansible_swaptotal_mb < 1
 
 - name: Set swapiness
   sysctl:
     name: vm.swappiness
     value: "1"
+  when: ansible_swaptotal_mb < 1
