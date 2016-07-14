@@ -32,11 +32,7 @@ None.
 
 Ansible          | Debian Jessie    | Ubuntu 14.04    | Ubuntu 12.04
 :--------------: | :--------------: | :-------------: | :-------------: 
-1.8              | Yes              | Yes             | Yes
-1.9              | Yes              | Yes             | Yes
-2.0.1*           | Yes              | Yes             | Yes
-
-*) 2.0.0.0, 2.0.0.1, 2.0.0.2 are not supported!
+2.1              | Yes              | Yes             | Yes
 
 ## License
 
@@ -44,4 +40,4 @@ MIT / BSD
 
 ## Author Information
 
- - Tobias Schifftner, @tschifftner
+ - [Tobias Schifftner](https://twitter.com/tschifftner), [ambimax® GmbH](https://www.ambimax.de)
